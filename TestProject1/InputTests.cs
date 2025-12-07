@@ -28,5 +28,17 @@ namespace TestProject1
             var output = manager.CommandInput(null);
             Assert.Equal("", output);
         }
+        [Theory]
+        [InlineData(@"'hello    world'", "hello    world")]
+        [InlineData(@"hello    world", "hello world")]
+        [InlineData(@"'hello''world'", "helloworld")]
+        [InlineData(@"hello''world", "helloworld")]
+        [InlineData(@"asdfasdfas    ' asdfas'  asdf", "asdfasdfas  asdfas asdf")]
+        [InlineData(@"'hello    world'    'hello    world'", "hello    world hello    world")]
+        public void WhenSingleQuoteParamenterAreInput_ThenArgumentsAreParsedCorrectly(string argumentToParse, string expectedOutput)
+        {
+            var output = ConsoleManager.ParseInput(argumentToParse);
+            Assert.Equal(expectedOutput, string.Join(" ", output));
+        }
     }
 }
