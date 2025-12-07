@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codecrafters-shell", "src\codecrafters-shell.csproj", "{DD2B9F8E-E919-7247-BAF3-172A98C505EF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{C83CCF08-5059-438E-A802-BAA95C826CE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codecrafters-shell", "src\codecrafters-shell.csproj", "{DD2B9F8E-E919-7247-BAF3-172A98C505EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,14 +12,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DD2B9F8E-E919-7247-BAF3-172A98C505EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD2B9F8E-E919-7247-BAF3-172A98C505EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD2B9F8E-E919-7247-BAF3-172A98C505EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD2B9F8E-E919-7247-BAF3-172A98C505EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C83CCF08-5059-438E-A802-BAA95C826CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C83CCF08-5059-438E-A802-BAA95C826CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C83CCF08-5059-438E-A802-BAA95C826CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C83CCF08-5059-438E-A802-BAA95C826CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD2B9F8E-E919-7247-BAF3-172A98C505EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD2B9F8E-E919-7247-BAF3-172A98C505EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD2B9F8E-E919-7247-BAF3-172A98C505EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD2B9F8E-E919-7247-BAF3-172A98C505EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

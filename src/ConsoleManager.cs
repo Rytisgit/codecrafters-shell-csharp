@@ -69,9 +69,14 @@ namespace CodecraftersShell
            
             return new string[] { input };
         }
-        private static string[] WhiteSpaceSplit(string input)
+        private static string[] WhiteSpaceSplit(string argsString)
         {
             var list = new List<string>();
+            while (argsString.Length > 0) {
+                var splitInTwo = argsString.Split(" ", 2);
+                list.Add(splitInTwo[0]);
+            }
+            return list.ToArray();
         }
         private static string ParseSingleQuote(string input)
         {
