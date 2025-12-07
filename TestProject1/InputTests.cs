@@ -9,10 +9,12 @@ namespace TestProject1
 {
     public class InputTests
     {
+        private void test(int x) { }
         ConsoleManager manager;
         public InputTests()
         {
-            manager = new ConsoleManager();
+            Action<int> fakeExit = test;
+            manager = new ConsoleManager(test);
         }
         [Fact]
         public void WhenInvalidCommandIsEntered_ThenConsoleManagerReturnsBadCommand()
