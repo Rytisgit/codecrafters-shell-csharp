@@ -1,15 +1,21 @@
+using System;
+
 namespace CodecraftersShell
 {
     class Program
     {
         private const string StartOfInputConsole = "$ ";
 
+        public static void ExitProgram(int code)
+        {
+            Environment.Exit(code);
+        }
+
         static void Main()
         {
             //TODO: Uncomment the code below to pass the first stage
 
-
-            ConsoleManager manager = new ConsoleManager();
+            ConsoleManager manager = new ConsoleManager(ExitProgram);
             while (true)
             {
                 Console.Write(StartOfInputConsole);
