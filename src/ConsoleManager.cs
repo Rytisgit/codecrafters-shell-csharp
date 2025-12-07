@@ -15,25 +15,40 @@ namespace CodecraftersShell
             exitAction = ExitAction;
         }
 
-        public void CommandHandler(string command)
+        public string CommandHandler(string command, string[] args)
         {
-            if (command == "exit") 
+            var res = "";
+            switch (command)
             {
-                ExecExit();
+                case "exit":
+                    ExecExit();
+                    break;
+                case "echo":
+                    res = HandleEcho(args);
+                    break;
+                default:
+                    res = $"{command}: command not found";
+                    break;
             }
+            return res;
+        }
 
+        public string HandleEcho(string[] args)
+        {
+            return string.Join(" ", args);
         }
 
         private void ExecExit() {
             exitAction(0);
         }
 
-        public string CommandInput(string command) {
-            if (command == null) {
+        public string CommandInput(string input) {
+            if (input == null) {
                 return "";
             }
-            CommandHandler(command);
-            return $"{command}: command not found";
+            var splitInput = input.Split(' ');
+
+            return CommandHandler(splitInput[0], splitInput.Skip(1).ToArray());
         }
     }
 }

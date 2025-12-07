@@ -21,5 +21,12 @@ namespace TestProject1
             var output = manager.CommandInput("exit");
             Assert.Equal(exitCode, FinalExitCode);
         }
+        [Fact]
+        public void WhenEchoCommandIsEntered_ThenEchoMethodIsCalled()
+        {
+            var output = manager.CommandInput("echo test");
+
+            Assert.Equal("test", output);
+        }
     }
 }
